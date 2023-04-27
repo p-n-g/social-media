@@ -1,0 +1,64 @@
+.UpdateProfile {
+  height: 480px;
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .left-part {
+    flex: 1;
+
+    img {
+      padding: 2px;
+      height: 160px;
+      width: 160px;
+      border: 2px dashed #181818;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .input-user-img {
+      display: none;
+    }
+  }
+
+  .right-part {
+    flex: 3;
+    padding: 20px;
+    input {
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      display: block;
+      width: 100%;
+    }
+
+    .update-profile {
+      width: fit-content;
+    }
+    form {
+      border: 1px solid #323232;
+      border-radius: 4px;
+      padding: 20px;
+    }
+    .name, .bio {
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .delete-profile {
+      margin-top: 20px;
+      width: fit-content;
+      border-radius: 4px;
+      color: white;
+      background-color: #ff3939;
+      padding: 10px 40px;
+    }
+    .delete-profile:hover {
+      background-color: #eb2f2f;
+    }
+    .delete-profile:active {
+      background-color: #ff3939;
+    }
+  }
+}

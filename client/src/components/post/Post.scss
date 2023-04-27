@@ -1,0 +1,42 @@
+
+.Post {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+    .content{
+        height: 400px;
+        img{
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+    }
+    .footer {
+        padding: 20px 5px;
+        .icon {
+            font-size: 1.5rem;
+        }
+        .likes {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .caption {
+            margin-top: 10px;
+        }
+        .time-ago {
+            margin-top: 10px;
+            color: #bbb;
+        }
+    }
+}

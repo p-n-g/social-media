@@ -1,0 +1,41 @@
+
+
+.Feed {
+    .container {
+        display: flex;
+        gap: 20px;
+        height: 100vh; 
+        overflow: hidden;
+    }
+    .left-part {
+        height: "calc(100vh-60px)";
+        overflow-y: auto;
+        flex: 2;
+    }
+    .left-part::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .right-part{
+        flex:1;
+        margin-top: 20px;
+
+        .followings-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .followings-list::-webkit-scrollbar {
+            display: none;
+          }
+        .suggestions-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .suggestions-list::-webkit-scrollbar {
+            display: none;
+          }
+        .title {
+            margin-top: 20px;
+        }
+    }
+}
