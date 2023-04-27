@@ -15,6 +15,7 @@ const Logout = () => {
         dispatch(clearFeedSLice());
         
         removeItem(KEY_ACCESS_TOKEN);
+        window.location.replace("/login", "_self");
     }
 }
 

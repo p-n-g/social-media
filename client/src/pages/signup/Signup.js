@@ -18,6 +18,15 @@ function Signup(){
         e.preventDefault();
         try{
             dispatch(setLoading(true));
+            // console.log(emailRef.current.value);
+            // console.log(passwordRef.current.value);
+            // console.log(nameRef.current.value);
+
+            await axiosClient.post("/auth/signup", {
+                email: emailRef.current.value,
+                password: passwordRef.current.value,
+                name: nameRef.current.value,
+            });
             navigate("/");
         } catch(e){
             console.log(e);

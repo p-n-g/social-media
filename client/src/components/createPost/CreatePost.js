@@ -6,6 +6,7 @@ import { BsImage } from "react-icons/bs";
 import axiosClient from "../../utils/axiosClient";
 import { setLoading } from "../../redux/slices/appConfigSlice";
 import { getUserProfile } from "../../redux/slices/postsSlice";
+import { setToastData } from "../../redux/slices/appConfigSlice";
 
 const CreatePost = ({ src }) => {
   const [postImg, setPostImg] = useState("");
@@ -56,7 +57,7 @@ const CreatePost = ({ src }) => {
         })
       );
     } catch (error) {
-      console.log(e.message);
+      console.log(error.message);
     } finally {
       dispatch(setLoading(false));
       setCaption("");

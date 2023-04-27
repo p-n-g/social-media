@@ -25,6 +25,13 @@ axiosClient.interceptors.response.use(
   async (response) => {
     store.dispatch(setLoading(false));
     const data = response.data;
+
+    if(data.statusCode === 200 && data.result === "user was deleted"){
+      removeItem(KEY_ACCESS_TOKEN);
+        window.location.replace("/login", "_self");
+        return Promise.reject(data);
+    }
+
     if (data.status === "ok") {
       return data;
     }

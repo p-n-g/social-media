@@ -21,19 +21,19 @@
         margin-top: 20px;
 
         .followings-list {
+            margin-top: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
             max-height: 300px;
             overflow-y: auto;
         }
-        .followings-list::-webkit-scrollbar {
-            display: none;
-          }
         .suggestions-list {
+            margin-top: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
             max-height: 300px;
             overflow-y: auto;
         }
-        .suggestions-list::-webkit-scrollbar {
-            display: none;
-          }
         .title {
             margin-top: 20px;
         }

@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import {useState, useEffect} from "react";
 import { updateMyProfile } from "../../redux/slices/appConfigSlice";
+import axiosClient from "../../utils/axiosClient";
 
 const UpdateProfile = () => {
 
@@ -41,6 +42,10 @@ const UpdateProfile = () => {
     }));
   }
 
+  async function handleDelete() {
+    const response = await axiosClient.delete("/user/");
+  }
+
   return (
     <div className="UpdateProfile">
       <div className="container">
@@ -55,7 +60,7 @@ const UpdateProfile = () => {
 
             <input className="update-profile primary-btn" type="submit" value="Update Profile"/>
           </form>
-          <input className="delete-profile hover-link" type="submit" value="Delete Profile" />
+          <input className="delete-profile hover-link" type="submit" value="Delete Profile" onClick={handleDelete} />
         </div>
       </div>
     </div>
